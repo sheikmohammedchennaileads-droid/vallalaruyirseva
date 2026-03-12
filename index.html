@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from html.kodesolution.com/2026/hopenest-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 07:59:27 GMT -->
+<head>
+<meta charset="utf-8">
+ <title>Vallalar uyir seva arakattalai </title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+ .floating-contact {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Buttons */
+.contact-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  font-size: 22px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.whatsapp { background: #176835; }
+.call { background: #c62828; }
+
+/* Floating Enquiry Box */
+.enquiry-float {
+  position: fixed;
+  right: 20px;
+  width: 260px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 9999;
+    display: none;
+}
+/* Form */
+.enquiry-float form h4 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.enquiry-float input,
+.enquiry-float textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.enquiry-btn {
+  width: 100%;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.enquiry-btn:hover {
+  background: #c92f3c;
+}
+</style>
+<body>
+  <div class="page-wrapper">
+<div class="floating-contact">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/919790401442" target="_blank" class="contact-btn whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Call -->
+  <button class="contact-btn call" id="callToggle">
+    <i class="fas fa-envelope"></i>
+  </button>
+
+  <!-- Enquiry Form -->
+  <div class="enquiry-float" id="enquiryBox">
+  <form>
+    <h4>Quick Enquiry</h4>
+
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone" required>
+    <textarea placeholder="Message" rows="3" required></textarea>
+
+    <button type="submit" class="enquiry-btn">Submit</button>
+  </form>
+</div>
+
+</div>
+    <!-- Preloader Start -->
+    <!-- <div id="preloader" class="preloader">
+      <div class="animation-preloader">
+        <div class="spinner"></div>
+        <div class="txt-loading">
+          <span data-text-preloader="H" class="letters-loading"> H </span>
+          <span data-text-preloader="O" class="letters-loading"> O </span>
+          <span data-text-preloader="P" class="letters-loading"> P </span>
+          <span data-text-preloader="E" class="letters-loading"> E </span>
+          <span data-text-preloader="N" class="letters-loading"> N </span>
+          <span data-text-preloader="E" class="letters-loading"> E </span>
+          <span data-text-preloader="S" class="letters-loading"> S </span>
+          <span data-text-preloader="T" class="letters-loading"> T </span>
+        </div>
+        <p class="text-center">Loading</p>
+      </div>
+      <div class="loader">
+        <div class="row">
+          <div class="col-3 loader-section section-left">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-left">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-right">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-right">
+            <div class="bg"></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Back To Top Start -->
+    <button id="back-top" class="back-to-top">
+      <i class="fa-regular fa-arrow-up"></i>
+    </button>
+
+    <!-- MouseCursor Start -->
+    <div class="mouseCursor cursor-outer"></div>
+    <div class="mouseCursor cursor-inner"></div>
+
+    <!-- Main Header-->
+    <header class="main-header header-style-one header-1">
+      <a href="index.html" class="main-logo"><img src="images/logo1.png"style="height:100px;"
+        alt="img"></a>
+      <a href="contact.html" class="link-btn">Become a Volunteer</a>
+      <!-- Header Lower -->
+      <div class="container d-none d-lg-block">
+        <div class="header-top-wrapper">
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i>22 Noyyal Street, Kamatchipuram, Coimbatore 
+            641013   </li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:Vallalaruyirsevaarakattalai@gmail.com">
+              Vallalaruyirsevaarakattalai@gmail.com</a></li>
+          </ul>
+          <!-- <div class="social-icon">
+            <span>Visit Our Social Pages:</span>
+            <div class="social-icon">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="header-lower">
+        <!-- Main box -->
+        <div class="container">
+          <div class="main-box">
+            <!--Nav Box-->
+            <div class="nav-outer" >
+              <div class="logo d-none">
+                <a href="index.html">
+                  <img src="images/logo1.png" style="height: 100px;" alt="img"></a>
+              </div>
+              <nav class="nav main-menu">
+                <ul class="navigation">
+                  <li class="dropdown current">
+                    <a href="index.html">Home</a>
+                   
+                  </li>
+                  <li><a href="services.html">Our Services</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+              <div class="outer-box">
+                <!-- Main Menu End-->
+                <div class="ui-btn-outer">
+                  <div class="ui-btn-search">
+                    <!-- <button class="ui-btn ui-btn search-btn main-header__search search-toggler">
+                      <i class="fa-regular fa-magnifying-glass"></i></button> -->
+                    <a href="contact.html" class="theme-btn"><i class="fa-solid fa-heart">
+
+                    </i> Donate Now</a>
+                  </div>
+
+                  <!-- Mobile Nav toggler -->
+                </div>
+                <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Header Lower -->
+
+      <!-- Mobile Menu  -->
+      <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+
+        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+        <nav class="menu-box">
+          <div class="upper-box">
+            <div class="nav-logo">
+              <a href="index.html"><img src="images/logo1.png" style="height: 100px;" alt=""></a>
+            </div>
+            <div class="close-btn"><i class="icon fa fa-times"></i></div>
+          </div>
+
+          <ul class="navigation clearfix">
+            <!--Keep This Empty / Menu will come through Javascript-->
+          </ul>
+          <ul class="contact-list-one">
+            <li>
+              <!-- Contact Info Box -->
+              <div class="contact-info-box">
+                <i class="icon lnr-icon-phone-handset"></i>
+                <span class="title">Call Now</span>
+                <a href="tel:+919600248956">+91 96002 48956</a>
+              </div>
+            </li>
+            <li>
+              <!-- Contact Info Box -->
+              <div class="contact-info-box">
+                <span class="icon lnr-icon-envelope1"></span>
+                <span class="title">Send Email</span>
+                <a href="mailto:Vallalaruyirsevaarakattalai@gmail.com">Vallalaruyirsevaarakattalai@gmail.com</a>
+              </div>
+            </li>
+            <!-- <li>
+              
+              <div class="contact-info-box">
+                <span class="icon lnr-icon-clock"></span>
+                <span class="title">Send Email</span>
+                Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+              </div>
+            </li> -->
+          </ul>
+
+          <!-- <ul class="social-links">
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul> -->
+        </nav>
+      </div>
+      <!-- End Mobile Menu -->
+
+      <!-- Header Search -->
+      <!-- <div class="search-popup">
+        <span class="search-back-drop"></span>
+        <button class="close-search"><span class="fa fa-times"></span></button>
+
+        <div class="search-inner">
+          <form method="post" action="https://html.kodesolution.com/2026/hopenest-html/index.html">
+            <div class="form-group">
+              <input type="search" name="search-field" value="" placeholder="Search..." required="">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div> -->
+      <!-- End Header Search -->
+
+      <!-- Sticky Header  -->
+      <div class="sticky-header">
+        <div class="auto-container">
+          <div class="inner-container">
+            <!--Logo-->
+            <div class="logo">
+              <a href="index.html"><img src="images/logo1.png"  alt="img"></a>
+            </div>
+
+            <!--Right Col-->
+            <div class="nav-outer">
+              <!-- Main Menu -->
+              <nav class="main-menu">
+                <div class="navbar-collapse show collapse clearfix">
+                  <ul class="navigation clearfix">
+                    <!--Keep This Empty / Menu will come through Javascript-->
+                  </ul>
+                </div>
+              </nav>
+              <!-- Main Menu End-->
+
+              <!--Mobile Navigation Toggler-->
+             <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Sticky Menu -->
+    </header>
+    <!--End Main Header -->
+   
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+
+        <!-- Hero Section Start -->
+      <section class="hero-section">
+  <div class="swiper banner-active">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="hero-1">
+          <div class="hero-bg bg-cover" style="background-image: url('images/slide1.jpg');"></div>
+          <div class="circle-left"><img src="images/banner/circle-left.png" alt=""></div>
+          <div class="object-shape"><img src="images/banner/object-1-1.png" alt=""></div>
+
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-lg-8">
+                <div class="hero-content">
+
+                  <h4 class="hero-sub wow fadeInUp">Compassion • Awareness • Service</h4>
+
+                  <h1 class="hero-title char-animation">
+                    Spreading Vallalar’s Message of Humanity
+                  </h1>
+
+                  <p class="wow fadeInUp" data-wow-delay=".3s">
+                    Vallalar Uyir Seva Arakattalai works to spread the teachings of
+                    Ramalinga Vallalar and promote compassion, unity, and kindness
+                    toward all living beings through social service and awareness programs.
+                  </p>
+
+                  <div class="hero-button wow fadeInUp" data-wow-delay=".5s">
+                    <a href="contact.html" class="theme-btn">
+                      <i class="fa-solid fa-heart"></i> Support Our Mission
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="hero-image-items wow fadeInUp" data-wow-delay=".3s">
+            <div class="thumb-1">
+              <img src="images/banner/hero-image-1-1.jpg" alt="">
+            </div>
+            <div class="thumb-2">
+              <img src="images/banner/hero-image-1-2.jpg" alt="">
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="hero-1">
+          <div class="hero-bg bg-cover" style="background-image: url('images/slide2.jpg');"></div>
+          <div class="circle-left"><img src="images/banner/circle-left.png" alt=""></div>
+          <div class="object-shape"><img src="images/banner/object-1-1.png" alt=""></div>
+
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-lg-8">
+                <div class="hero-content">
+
+                  <h4 class="hero-sub wow fadeInUp">Drug Awareness Programs</h4>
+
+                  <h1 class="hero-title char-animation">
+                    Guiding Lives Away From Addiction
+                  </h1>
+
+                  <p class="wow fadeInUp" data-wow-delay=".3s">
+                    Our counseling and awareness initiatives help individuals
+                    overcome drug addiction and encourage a healthier and
+                    responsible lifestyle for a stronger community.
+                  </p>
+
+                  <div class="hero-button wow fadeInUp" data-wow-delay=".5s">
+                    <a href="services.html" class="theme-btn">
+                      <i class="fa-solid fa-heart"></i> View Our Services
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="hero-image-items wow fadeInUp" data-wow-delay=".3s">
+            <div class="thumb-1"><img src="images/banner/hero-image-1-1.jpg" alt=""></div>
+            <div class="thumb-2"><img src="images/banner/hero-image-1-2.jpg" alt=""></div>
+          </div> -->
+
+        </div>
+      </div>
+
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="hero-1">
+          <div class="hero-bg bg-cover" style="background-image: url('images/slide1.jpg');"></div>
+          <div class="circle-left"><img src="images/banner/circle-left.png" alt=""></div>
+          <div class="object-shape"><img src="images/banner/object-1-1.png" alt=""></div>
+
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-lg-8">
+                <div class="hero-content">
+
+                  <h4 class="hero-sub wow fadeInUp">Online & Offline Courses</h4>
+
+                  <h1 class="hero-title char-animation">
+                    Learn Vallalar’s Philosophy of Compassion
+                  </h1>
+
+                  <p class="wow fadeInUp" data-wow-delay=".3s">
+                    Join our educational programs that teach the life and
+                    philosophy of Vallalar. Online courses are available so
+                    anyone can learn about compassion and humanitarian service.
+                  </p>
+
+                  <div class="hero-button wow fadeInUp" data-wow-delay=".5s">
+                    <a href="services.html" class="theme-btn">
+                      <i class="fa-solid fa-heart"></i> Join a Course
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="hero-image-items wow fadeInUp" data-wow-delay=".3s">
+            <div class="thumb-1"><img src="images/banner/hero-image-1-1.jpg" alt=""></div>
+            <div class="thumb-2"><img src="images/banner/hero-image-1-2.jpg" alt=""></div>
+          </div> -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+        <!-- Brand Section Start -->
+        <!-- <div class="brand-section wow fadeInUp" data-wow-delay=".3s">
+          <div class="swiper brand-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1"><img src="images/icons/brand1-1.png" alt="img"></span>
+                  <span class="brand-img-1"><img src="images/icons/brand1-1-hover.png" alt="img"></span>
+                </div>
+              </div>
+               <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1"><img src="images/icons/brand1-2.png" alt="img"></span>
+                  <span class="brand-img-1"><img src="images/icons/brand1-2-hover.png" alt="img"></span>
+                </div>
+              </div>
+               <div class="swiper-slide">
+                  <div class="brand-box-1">
+                    <span class="brand-img-1"><img src="images/icons/brand1-3.png" alt="img"></span>
+                    <span class="brand-img-1"><img src="images/icons/brand1-3-hover.png" alt="img"></span>
+                  </div>
+              </div>
+               <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1"><img src="images/icons/brand1-4.png" alt="img"></span>
+                  <span class="brand-img-1"><img src="images/icons/brand1-4-hover.png" alt="img"></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1"><img src="images/icons/brand1-5.png" alt="img"></span>
+                  <span class="brand-img-1"><img src="images/icons/brand1-5-hover.png" alt="img"></span>
+                </div>
+              </div>
+               <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1"><img src="images/icons/brand1-6.png" alt="img"></span>
+                  <span class="brand-img-1"><img src="images/icons/brand1-6-hover.png" alt="img"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+  <!-- About Section Start -->
+        <section class="about-section section-padding ">
+          <div class="object-shape float-bob-y d-none d-xxl-block">
+            <img src="images/icons/object1-1.png" alt="">
+          </div>
+          <div class="layer-shape1 float-bob-x d-none d-xxl-block">
+            <img src="images/icons/layer1-1.png" alt="">
+          </div>
+           <div class="layer-shape2 float-bob-y d-none d-xxl-block">
+            <img src="images/icons/layer1-2.png" alt="">
+          </div>
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-xl-6 col-lg-8">
+                <div class="about-left-thumb-items">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-5 col-5 wow fadeInUp" data-wow-delay=".3s">
+                      <div class="uni-icon"><img src="images/resource/about-1-uni-icon.png" alt="img"></div>
+                      <div class="thumb-1"><img src="images/a2.webp" alt="img"></div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-7 col-7 wow fadeInUp" data-wow-delay=".5s">
+                      <div class="thumb-2"><img src="images/a3.webp" alt="img"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-8 wow fadeInUp" data-wow-delay=".3s">
+  <div class="about-right-content">
+    <div class="sec-title mb-0">
+      <div class="sec-sub-title">
+        <h6 class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">About Us</h6>
+      </div>
+      <h2 class="title tx-title sec_title tz-itm-title tz-itm-anim">
+        Serving Humanity Through Vallalar’s Teachings of Compassion
+      </h2>
+    </div>
+
+    <ul class="nav">
+      <li class="nav-item">
+        <a href="#thumb1" data-bs-toggle="tab" class="nav-link active">Our Mission.</a>
+      </li>
+      <li class="nav-item">
+        <a href="#thumb2" data-bs-toggle="tab" class="nav-link">Our Vision.</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+
+      <!-- Mission -->
+      <div id="thumb1" class="tab-pane fade show active">
+        <p class="about-text">
+          Our mission is to spread awareness about the teachings of
+          Ramalinga Vallalar and promote a society built on compassion,
+          equality, and kindness. Through counseling programs, drug
+          awareness initiatives, and educational courses, we aim to guide
+          individuals toward a healthier and more responsible life.
+        </p>
+
+        <div class="about-bottom-area">
+          <a href="contact.html" class="theme-btn">
+            <i class="fa-solid fa-heart"></i> Contact Us
+          </a>
+
+          <div class="text-area">
+            <h3 class="title">100%</h3>
+            <p>Non-Profit <br> Social Service</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vision -->
+      <div id="thumb2" class="tab-pane fade">
+        <p class="about-text">
+          Our vision is to build a compassionate and harmonious society
+          inspired by Vallalar’s philosophy of “Jeeva Karunyam” —
+          compassion towards all living beings. We strive to educate
+          communities, support individuals affected by social challenges,
+          and spread Vallalar’s message of humanity through both offline
+          and online learning programs.
+        </p>
+
+        <div class="about-bottom-area">
+          <a href="contact.html" class="theme-btn">
+            <i class="fa-solid fa-heart"></i>Contact Us
+          </a>
+
+          <div class="text-area">
+            <h3 class="title">100%</h3>
+            <p>Transparent <br> & Community Driven</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feature Section Start -->
+        <section class="feature-section fix section-padding fix section-bg">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-7">
+                <div class="sec-title text-center">
+                  <div class="sec-sub-title">
+                    <h6 class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">Donation Services</h6>
+                  </div>
+                   <h2 class="title tx-title sec_title tz-itm-title tz-itm-anim">
+            Supporting Recovery, Guidance <br> and Community Awareness
+          </h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Block 1: Healthy Food -->
+              <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+             <div class="feature-block-1">
+          <div class="icon bg-4">
+            <img src="images/icons/icon1-4.png" alt="Awareness Programs">
+          </div>
+          <div class="content">
+            <h4 class="title">Awareness Campaigns</h4>
+            <p>
+              Your donations help us organize public awareness programs, outreach activities,
+              and social support initiatives focused on prevention, recovery, and community safety.
+            </p>
+          </div>
+        </div>
+              </div>
+              <!-- Block 1: Healthy Food -->
+              <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                <div class="feature-block-1">
+          <div class="icon">
+            <img src="images/icons/icon1-1.png" alt="Counseling Support">
+          </div>
+          <div class="content">
+            <h4 class="title">Addiction Counseling</h4>
+            <p>
+              We offer counseling and emotional support for individuals affected by drug addiction,
+              helping them begin their journey toward recovery and rehabilitation.
+            </p>
+          </div>
+        </div>
+              </div>
+              
+              <!-- Block 1: Healthy Food -->
+              <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                 <div class="feature-block-1">
+          <div class="icon bg-2">
+            <img src="images/icons/icon1-2.png" alt="Police Support">
+          </div>
+          <div class="content">
+            <h4 class="title">Police Coordination</h4>
+            <p>
+              We work along with police personnel to support awareness efforts, guide affected
+              individuals, and strengthen community-level action against substance abuse.
+            </p>
+          </div>
+        </div>
+              </div>
+              <!-- Block 1: Healthy Food -->
+              <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                <div class="feature-block-1">
+          <div class="icon bg-3">
+            <img src="images/icons/icon1-3.png" alt="Education Programs">
+          </div>
+          <div class="content">
+            <h4 class="title">Education & Guidance</h4>
+            <p>
+              We conduct educational sessions for students, families, and communities to explain
+              the dangers of drug abuse and the importance of making positive life choices.
+            </p>
+          </div>
+        </div>
+              
+              </div>
+              <div style="text-align:center;">
+  <a href="services.html" class="theme-btn">
+    <i class="fa-solid fa-heart"></i> View More
+  </a>
+</div>  
+            </div>
+             
+          </div>
+        </section>
+
+        <!-- Counter Section Start -->
+        <section class="counter-section fix">
+  <div class="container"> 
+    <div class="counter-wrapper wow fadeInUp" data-wow-delay=".3s">
+
+      <div class="counter-items">
+        <div class="icon"><img src="images/icons/counter-icon-1-1.png" alt=""></div>
+        <div class="content">
+          <h3 class="count-box">
+            <span class="count-text" data-speed="3000" data-stop="25">10</span>+
+          </h3>
+          <p>Awareness Programs Conducted</p>
+        </div>
+      </div>
+
+      <div class="counter-items">
+        <div class="icon"><img src="images/icons/counter-icon-1-2.png" alt=""></div>
+        <div class="content">
+          <h3 class="count-box">
+            <span class="count-text" data-speed="3000" data-stop="500">150</span>+
+          </h3>
+          <p>People Counseled & Guided</p>
+        </div>
+      </div>
+
+      <div class="counter-items">
+        <div class="icon"><img src="images/icons/counter-icon-1-3.png" alt=""></div>
+        <div class="content">
+          <h3 class="count-box">
+            <span class="count-text" data-speed="3000" data-stop="200">75</span>+
+          </h3>
+          <p>Vallalar Philosophy Students</p>
+        </div>
+      </div>
+
+      <div class="counter-items">
+        <div class="icon"><img src="images/icons/counter-icon-1-4.png" alt=""></div>
+        <div class="content">
+          <h3 class="count-box">
+            <span class="count-text" data-speed="3000" data-stop="100">100</span>%
+          </h3>
+          <p>Non-Profit & Community Service</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+        <!-- Donation Section Start -->
+        <!-- <section class="donation-section fix section-padding">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-6 col-lg-7">
+                <div class="sec-title text-center">
+                  <div class="sec-sub-title"><h6 class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">Campaigns</h6></div>
+                  <h2 class="title tx-title sec_title  tz-itm-title tz-itm-anim">Featured Campaigns You Can Help Today</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                <div class="donation-single-block1">
+                  <div class="thumb">
+                    <img src="images/resource/donate1-1.jpg" alt="">
+                    <img src="images/resource/donate1-1.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <a href="page-causes-details.html" class="post-box">Education</a>
+                    <h4 class="title"><a href="page-causes-details.html">Supporting Education for Underprivileged Children</a></h4>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when </p>
+                    <div class="fundraiser-card">
+                      
+                      <div class="progress-wrapper">
+                        <div class="progress-track">
+                          
+                          <div class="progress-fill" style="--target-width: 70%;">
+                            <div class="progress-knob"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                    
+                      <div class="stats-row">
+                        <div class="stat-item">
+                          <span class="label">Raised:</span>
+                          <span class="value">$4,599</span>
+                        </div>
+                        <div class="stat-item">
+                          <span class="label">Goal:</span>
+                          <span class="value">$6,599</span>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="page-causes-details.html" class="theme-btn">Donate Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                <div class="donation-single-block1 active">
+                  <div class="thumb">
+                    <img src="images/resource/donate1-2.jpg" alt="">
+                    <img src="images/resource/donate1-2.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <a href="page-causes-details.html" class="post-box">Food</a>
+                    <h4 class="title"><a href="page-causes-details.html">Providing Daily Nutritious Meals for Hungry Children</a></h4>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when</p>
+                    <div class="fundraiser-card">
+                     
+                      <div class="progress-wrapper">
+                        <div class="progress-track">
+                          
+                          <div class="progress-fill" style="--target-width: 70%;">
+                            <div class="progress-knob"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                    
+                      <div class="stats-row">
+                        <div class="stat-item">
+                          <span class="label">Raised:</span>
+                          <span class="value">$4,599</span>
+                        </div>
+                        <div class="stat-item">
+                          <span class="label">Goal:</span>
+                          <span class="value">$6,599</span>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="page-causes-details.html" class="theme-btn">Donate Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                <div class="donation-single-block1">
+                  <div class="thumb">
+                    <img src="images/resource/donate1-3.jpg" alt="">
+                    <img src="images/resource/donate1-3.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <a href="page-causes-details.html" class="post-box">Health & Nutrition</a>
+                    <h4 class="title"><a href="page-causes-details.html">Improving Child Health Through Food Programs</a></h4>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when</p>
+                    <div class="fundraiser-card">
+                     
+                      <div class="progress-wrapper">
+                        <div class="progress-track">
+                        
+                          <div class="progress-fill" style="--target-width: 70%;">
+                            <div class="progress-knob"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                   
+                      <div class="stats-row">
+                        <div class="stat-item">
+                          <span class="label">Raised:</span>
+                          <span class="value">$4,599</span>
+                        </div>
+                        <div class="stat-item">
+                          <span class="label">Goal:</span>
+                          <span class="value">$6,599</span>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="page-causes-details.html" class="theme-btn">Donate Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+        
+
+      
+
+       
+       
+
+        <!-- Donation Section Start -->
+        <!-- <section class="donation-section section-bg fix section-padding">
+          <div class="donation-image fix">
+            <img data-speed=".8" src="images/resource/donation-image.jpg" alt="">
+          </div>
+          <div class="shape-1 d-none d-xl-block">
+            <img src="images/icons/shape1-1.png" alt="">
+          </div>
+          <div class="shape-2 d-none d-xl-block">
+            <img src="images/icons/shape1-2.png" alt="">
+          </div>
+          <div class="shape-3 d-none d-xl-block">
+            <img src="images/icons/shape1-3.png" alt="">
+          </div>
+          <div class="container">
+            <div class="row g-0">
+              <div class="col-xl-5 col-lg-6">
+                <div class="donation-content-items">
+                  <div class="hand-shape"><img src="images/icons/hand-shape.png" alt=""></div>
+                  <div class="sec-title mb-0">
+                    <div class="sec-sub-title">
+                      <h6 class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle color-2">Help & Donate</h6>
+                    </div>
+                    <h2 class="title tx-title sec_title  tz-itm-title tz-itm-anim text-white">Your Small Contribution Can Change a Life</h2>
+                  </div>
+                  <p class="text wow fadeInUp" data-wow-delay=".3s">Your generous donations help us maintain our masjid, provide community services, and educate future generations. Every contribution counts and is greatly appreciated.</p>
+                  <div class="client-info-items wow fadeInUp" data-wow-delay=".5s">
+                    <div class="client-image">
+                      <img src="images/resource/client-1-1.jpg" alt="img" class="icon-1">
+                      <img src="images/resource/client-1-2.jpg" alt="img" class="icon-2">
+                      <img src="images/resource/client-1-3.jpg" alt="img" class="icon-3">
+                      <img src="images/resource/client-1-4.jpg" alt="img" class="icon-4">
+                      <div class="plus-icon">
+                        <i class="fa-regular fa-plus"></i>
+                      </div>
+                    </div>
+                    <h3 class="price">$4,599</h3>
+                    <h6 class="supporter-text">$3,250 raised by supporters</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-7 col-lg-6">
+                <div class="donation-form-box-items">
+                  <h3 class="donation-title char-animation">Make Donation</h3>
+                  <form class="wow fadeInUp" data-wow-delay=".3s">
+                    <div class="input-group-row">
+                      <input type="text" placeholder="Enter Your name">
+                      <input type="email" placeholder="Your Email">
+                    </div>
+                    <input type="text" placeholder="Company Name (Optional)" class="full-width">
+                    <input type="text" value="$100" id="selected-amount" class="full-width amount-input">
+                    <div class="amount-selection">
+                      <div class="amount-item" data-amount="$50">$50</div>
+                      <div class="amount-item" data-amount="$60">$60</div>
+                      <div class="amount-item" data-amount="$70">$70</div>
+                      <div class="amount-item" data-amount="$80">$80</div>
+                      <div class="amount-item" data-amount="$90">$90</div>
+                      <div class="amount-item active" data-amount="$100">$100</div>
+                      <div class="amount-item" data-amount="">Custom</div>
+                    </div>
+                    <button type="submit" class="theme-btn">Submit Donation</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+    
+        <!-- News Section Start -->
+        <section class="news-section section-padding fix section-bg">
+          <div class="news-shape-1 d-none d-xl-block">
+            <img src="images/resource/news-1-shape-1.png" alt="img">
+          </div>
+          <div class="news-shape-2 d-none d-xl-block">
+            <img src="images/resource/news-1-shape-2.png" alt="img">
+          </div>
+          <div class="news-shape-3 d-none d-xl-block">
+            <img src="images/resource/news-1-shape-3.png" alt="img">
+          </div>
+          <div class="news-shape-4 d-none d-xl-block">
+            <img src="images/resource/news-1-shape-4.png" alt="img">
+          </div>
+          <div class="container">
+            <div class="sec-title text-center">
+              <div class="sec-sub-title">
+                <h6 class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">Our Gallery</h6>
+              </div>
+              <h2 class="title tx-title sec_title  tz-itm-title tz-itm-anim">
+                Latest Updates from <br> Our Community
+              </h2>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                <div class="news-box-items">
+                  <div class="news-thumb">
+                    <img src="images/s1.jpeg" style="height: 330px;"alt="img">
+                    <img src="images/s1.jpeg" style="height: 330px;"alt="img">
+                  </div>
+                  <!-- <div class="news-content">
+                    <h4 class="title"><a href="news-details.html">How Nutritious Meals Help Children Stay in School</a></h4>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a </p>
+                    <a href="news-details.html" class="link-btn">Read More
+                      <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.6 13.4L13.2 7.3 M15.1 6c-1.9 1.2-4.9 4.4-2.1 8.3 M15.1 6c-1.7 1.4-5.8 3.1-8.6-.8" fill="none" stroke="#0E6539" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </a>
+                  </div> -->
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                <div class="news-box-items">
+                  <div class="news-thumb">
+                    <img src="images/s3.jpeg" style="height: 330px;"alt="img">
+                    <img src="images/s3.jpeg"style="height: 330px;" alt="img">
+                  </div>
+                  <!-- <div class="news-content">
+                    <h4 class="title"><a href="news-details.html">Why Education and Food Go for Children in Need</a></h4>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a </p>
+                    <a href="news-details.html" class="link-btn">Read More
+                      <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.6 13.4L13.2 7.3 M15.1 6c-1.9 1.2-4.9 4.4-2.1 8.3 M15.1 6c-1.7 1.4-5.8 3.1-8.6-.8" fill="none" stroke="#0E6539" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </a>
+                  </div> -->
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                <div class="news-box-items">
+                  <div class="news-thumb">
+                    <img src="images/s2.jpeg"  style="height: 330px;"alt="img">
+                    <img src="images/s2.jpeg" style="height: 330px;"
+                    alt="img">
+                  </div>
+                  
+                  <!-- <div class="news-content">
+                    <h4 class="title"><a href="news-details.html">How Your Donations Are Making a Real Difference</a></h4>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a </p>
+                    <a href="news-details.html" class="link-btn">Read More
+                      <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.6 13.4L13.2 7.3 M15.1 6c-1.9 1.2-4.9 4.4-2.1 8.3 M15.1 6c-1.7 1.4-5.8 3.1-8.6-.8" fill="none" stroke="#0E6539" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </a>
+                  </div> -->
+                </div>
+                
+              </div>
+              <div style="text-align:center; margin-top: 30px;">
+  <a href="gallery.html" class="theme-btn">
+    <i class="fa-solid fa-heart"></i> View More Gallery
+  </a>
+</div>  
+            </div>
+          </div>
+        </section>
+
+
+
+<!-- Testimonial Section Start -->
+<section class="testimonial-section fix section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="sec-title text-center">
+          <div class="sec-sub-title">
+            <h6 class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">Testimonials</h6>
+          </div>
+          <h2 class="title tx-title sec_title tz-itm-title tz-itm-anim">
+            Voices of Transformation and Community Support
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper testimonial-slider wow fadeInUp" data-wow-delay=".3s">
+      <div class="swiper-wrapper">
+
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-block-1">
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              The counseling program helped my brother recover from drug addiction. 
+              The guidance and support provided by the Vallalar Uyir Seva Arakattalai 
+              gave our family hope and strength during a difficult time.
+            </p>
+            <div class="client-info">
+              <!-- <div class="client-img">
+                <img src="images/resource/testi1-1.jpg" alt="">
+              </div> -->
+              <div class="info-content">
+                <h5 class="name">Ramesh Kumar</h5>
+                <span>Community Member</span>
+              </div>
+            </div>
+            <div class="quote-icon">
+              <img src="images/icons/quote1-1.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-block-1">
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              The Vallalar philosophy course changed my perspective on life. 
+              Learning about compassion and “Jeeva Karunyam” inspired me to 
+              practice kindness and help others in my community.
+            </p>
+            <div class="client-info">
+              <!-- <div class="client-img">
+                <img src="images/resource/testi1-1.jpg" alt="">
+              </div> -->
+              <div class="info-content">
+                <h5 class="name">Priya Lakshmi</h5>
+                <span>Course Participant</span>
+              </div>
+            </div>
+            <div class="quote-icon">
+              <img src="images/icons/quote1-1.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-block-1">
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              I truly appreciate the social awareness programs conducted by this trust. 
+              Their work with youth and communities helps prevent drug abuse and 
+              encourages a positive and responsible lifestyle.
+            </p>
+            <div class="client-info">
+              <!-- <div class="client-img">
+                <img src="images/resource/testi1-1.jpg" alt="">
+              </div> -->
+              <div class="info-content">
+                <h5 class="name">Arun Prakash</h5>
+                <span>Volunteer</span>
+              </div>
+            </div>
+            <div class="quote-icon">
+              <img src="images/icons/quote1-1.png" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="array-button">
+      <button class="array-prev">
+        <img src="images/icons/arrow-1.svg" alt="">
+      </button>
+      <button class="array-next">
+        <img src="images/icons/arrow-2.svg" alt="">
+      </button>
+    </div>
+
+    <div class="testi-text wow fadeInUp" data-wow-delay=".5s">
+      <h5 class="testi-title">
+        Your support helps us provide counseling, education programs, and 
+        community awareness initiatives to build a healthier and safer society.
+      </h5>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+        <!-- Gallery Section Start -->
+        <!-- <section class="gallery-section section-padding pb-0 fix">
+          <div class="container">
+            <div class="swiper gallery-slide wow fadeInUp" data-wow-delay=".3s">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="gallery-card-item">
+                    <div class="gallery-image">
+                      <img src="images/resource/gallery-1-1.jpg" alt="img">
+                      <a href="#" class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-card-item">
+                    <div class="gallery-image style-height">
+                      <img src="images/resource/gallery-1-2.jpg" alt="img">
+                      <a href="#" class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-card-item">
+                    <div class="gallery-image style-height">
+                      <img src="images/resource/gallery-1-3.jpg" alt="img">
+                      <a href="#" class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-card-item">
+                    <div class="gallery-image style-height">
+                      <img src="images/resource/gallery-1-4.jpg" alt="img">
+                      <a href="#" class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-card-item">
+                    <div class="gallery-image style-height">
+                      <img src="images/resource/gallery-1-5.jpg" alt="img">
+                      <a href="#" class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+        <!-- Footer Section Start -->
+        <footer class="footer-section bg-cover"
+         style="background-image: url('images/background/footer-bg.jpg');">
+          <div class="container">
+            <div class="footer-widget-wrapper">
+              <div class="row g-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                  <div class="footer-content">
+                    <a href="index.html" class="footer-logo"><img src="images/logo1.png"
+                      style="height: 110px;" alt="img"></a>
+                  <p>
+UYIR Seva Trust works with compassion and dedication to support people in need, 
+promote social welfare, and build a caring community for a better tomorrow.
+</p>
+                    <a href="contact.html" class="theme-btn">
+                      <i class="fas fa-heart"></i> Donate Now</a>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                  <div class="footer-contact-info">
+                    <div class="contact-info">
+                      <h3 class="number"><a href="tel:+919600248956"> +91 96002 48956</a></h3>
+                      <p class="email"><a href="mailto:Vallalaruyirsevaarakattalai@gmail.com">Vallalaruyirsevaarakattalai@gmail.com</a></p>
+                    </div>
+                    <h4 class="location-title">22 Noyyal Street, Kamatchipuram, Coimbatore 641013</h4>
+                  </div>
+                </div>
+                <div class="col-xl-5 col-lg-6 wow fadeInUp" data-wow-delay=".7s">
+                  <ul class="footer-menu-list">
+                    <li>
+                      <a href="index.html">
+                        <span>Home</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_871">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="services.html">
+                        <span>Our Services</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_8713">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="gallery.html">
+                        <span>Gallery</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_8714">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="contact.html">
+                        <span>Contact</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_8715">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <!-- <li>
+                      <a href="page-contact.html">
+                        <span>Contact</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_8716">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="footer-bottom-wrapper wow fadeInUp" data-wow-delay=".3s">
+               <p>
+© <span id="year"></span> Vallalar Uyir Seva Arakattalai. All Rights Reserved. 
+Developed by <a href="https://chennaileads.com" target="_blank">Chennai Leads</a>
+</p>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+                <!-- <div class="social-icon">
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                  <a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>  
+  </div>
+
+<!-- End Page Wrapper -->
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/gsap.js"></script>
+<script src="js/three.js"></script>
+<script src="js/hover-effect.umd.js"></script>
+<script src="js/gsap-scroll-to-plugin.js"></script>
+<script src="js/gsap-scroll-smoother.js"></script>
+<script src="js/gsap-scroll-trigger.js"></script>
+<script src="js/gsap-split-text.js"></script>
+<script src="js/split-type.min.js"></script>
+<script src="js/parallaxie.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/bxslider.js"></script>
+<script src="js/nice-select.min.js"></script>
+<script src="js/knob.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/mixitup.js"></script>
+<script src="js/script.js"></script>
+<script src="js/script-gsap.js"></script>
+<script src="assets/js/script.js"></script>
+    <script>
+  const toggleBtn = document.getElementById("callToggle");
+  const enquiryBox = document.getElementById("enquiryBox");
+
+  toggleBtn.addEventListener("click", () => {
+    enquiryBox.style.display =
+      enquiryBox.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".floating-contact")) {
+      enquiryBox.style.display = "none";
+    }
+  });
+  toggleBtn.addEventListener("click", () => {
+  enquiryBox.classList.toggle("show");
+});
+</script>
+</body>
+
+
+<!-- Mirrored from html.kodesolution.com/2026/hopenest-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 08:00:14 GMT -->
+</html>
