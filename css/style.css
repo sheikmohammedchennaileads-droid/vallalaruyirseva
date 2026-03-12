@@ -2811,7 +2811,7 @@ Scroll To Top style
 }
 @media (max-width: 991.98px) {
   .header-1 {
-    background-color: var(--theme-color1);
+    background-color: rgb(240, 240, 240);
   }
 }
 .header-1 .mobile-nav-toggler {
@@ -3546,7 +3546,7 @@ Scroll To Top style
   .main-header .logo img, .sticky-header .main-header .logo img {
     width: auto;
     max-width: none;
-    max-height: 80px;
+    max-height: 110px;
   }
   .main-header .main-box .nav-outer {
     width: auto;
@@ -3571,6 +3571,7 @@ Scroll To Top style
     min-width: auto;
     margin-right: 0px;
     max-width: 140px;
+    
   }
   .main-header .header-lower .logo-box .logo img {
     max-width: 140px;
