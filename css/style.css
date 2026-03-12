@@ -7961,8 +7961,8 @@ Section Title
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  /* -o-object-fit: cover;
+     object-fit: cover; */
   position: absolute;
   top: 0;
   left: 0;
