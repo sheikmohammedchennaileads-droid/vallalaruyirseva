@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from html.kodesolution.com/2026/hopenest-html/page-contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 08:00:22 GMT -->
+<head>
+<meta charset="utf-8" />
+ <title>Vallalar uyir seva arakattalai </title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<style>
+ .floating-contact {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Buttons */
+.contact-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  font-size: 22px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.whatsapp { background: #176835; }
+.call { background: #c62828; }
+
+/* Floating Enquiry Box */
+.enquiry-float {
+  position: fixed;
+  right: 20px;
+  width: 260px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 9999;
+    display: none;
+}
+/* Form */
+.enquiry-float form h4 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.enquiry-float input,
+.enquiry-float textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.enquiry-btn {
+  width: 100%;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.enquiry-btn:hover {
+  background: #c92f3c;
+}
+</style>
+<body>
+  <div class="page-wrapper">
+<div class="floating-contact">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/919790401442" target="_blank" class="contact-btn whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Call -->
+  <button class="contact-btn call" id="callToggle">
+    <i class="fas fa-envelope"></i>
+  </button>
+
+  <!-- Enquiry Form -->
+  <div class="enquiry-float" id="enquiryBox">
+  <form>
+    <h4>Quick Enquiry</h4>
+
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone" required>
+    <textarea placeholder="Message" rows="3" required></textarea>
+
+    <button type="submit" class="enquiry-btn">Submit</button>
+  </form>
+</div>
+
+</div>
+    <!-- <div id="preloader" class="preloader">
+      <div class="animation-preloader">
+        <div class="spinner"></div>
+        <div class="txt-loading">
+          <span data-text-preloader="H" class="letters-loading"> H </span>
+          <span data-text-preloader="O" class="letters-loading"> O </span>
+          <span data-text-preloader="P" class="letters-loading"> P </span>
+          <span data-text-preloader="E" class="letters-loading"> E </span>
+          <span data-text-preloader="N" class="letters-loading"> N </span>
+          <span data-text-preloader="E" class="letters-loading"> E </span>
+          <span data-text-preloader="S" class="letters-loading"> S </span>
+          <span data-text-preloader="T" class="letters-loading"> T </span>
+        </div>
+        <p class="text-center">Loading</p>
+      </div>
+      <div class="loader">
+        <div class="row">
+          <div class="col-3 loader-section section-left">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-left">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-right">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-right">
+            <div class="bg"></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Back-to-top start -->
+    <button id="back-top" class="back-to-top">
+      <i class="fa-regular fa-arrow-up"></i>
+    </button>
+    <!-- Back-to-top start -->
+
+    <!-- Main Header-->
+    <header class="main-header header-style-one header-2">
+      <!-- Header Lower -->
+      <div class="header-lower">
+        <!-- Main box -->
+        <div class="main-box">
+          <div class="logo">
+            <a href="index.html"><img src="images/logo1.png" style="height: 100px;" alt=""></a>
+          </div>
+          <!--Nav Box-->
+          <div class="nav-outer">
+             <nav class="nav main-menu">
+              <ul class="navigation" style="margin-left: 700px;">
+                <li class="dropdown current">
+                  <a href="index.html">Home</a>
+                 
+                </li>
+                <li class="current"><a href="services.html">Our Services</a></li>
+               
+               <li><a href="gallery.html">Gallery</a></li>
+               
+               
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+
+            <div class="outer-box">
+              <!-- Main Menu End-->
+              <div class="ui-btn-outer">
+                <div class="ui-btn-search">
+                  <!-- <button class="ui-btn ui-btn search-btn main-header__search search-toggler">
+                    <i class="fa-regular fa-magnifying-glass"></i></button> -->
+                  <!-- <a href="contact.html" class="theme-btn"><i class="fa-solid fa-heart"></i> Donate Now</a> -->
+                </div>
+                <!-- Mobile Nav toggler -->
+              </div>
+             <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Header Lower -->
+
+      <!-- Mobile Menu  -->
+      <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+
+        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+        <nav class="menu-box">
+          <div class="upper-box">
+            <div class="nav-logo">
+              <a href="index.html"><img src="images/logo1.png" alt=""></a>
+            </div>
+            <div class="close-btn"><i class="icon fa fa-times"></i></div>
+          </div>
+
+          <ul class="navigation clearfix">
+            <!--Keep This Empty / Menu will come through Javascript-->
+          </ul>
+          <ul class="contact-list-one">
+            <li>
+              <!-- Contact Info Box -->
+              <div class="contact-info-box">
+                <i class="icon lnr-icon-phone-handset"></i>
+                <span class="title">Call Now</span>
+                <a href="tel:+919600248956 ">+91 96002 48956 </a>
+              </div>
+            </li>
+            <li>
+              <!-- Contact Info Box -->
+              <div class="contact-info-box">
+                <span class="icon lnr-icon-envelope1"></span>
+                <span class="title">Send Email</span>
+                <a href="mailto:Vallalaruyirsevaarakattalai@gmail.com">Vallalaruyirsevaarakattalai@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <!-- Contact Info Box -->
+              <!-- <div class="contact-info-box">
+                <span class="icon lnr-icon-clock"></span>
+                <span class="title">Send Email</span>
+                Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+              </div> -->
+            </li>
+          </ul>
+
+          <!-- <ul class="social-links">
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul> -->
+        </nav>
+      </div>
+      <!-- End Mobile Menu -->
+
+      <!-- Header Search -->
+      <!-- <div class="search-popup">
+        <span class="search-back-drop"></span>
+        <button class="close-search"><span class="fa fa-times"></span></button>
+
+        <div class="search-inner">
+          <form method="post" action="https://html.kodesolution.com/2026/hopenest-html/index.html">
+            <div class="form-group">
+              <input type="search" name="search-field" value="" placeholder="Search..." required="">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div> -->
+      <!-- End Header Search -->
+
+      <!-- Sticky Header  -->
+      <div class="sticky-header">
+        <div class="auto-container">
+          <div class="inner-container">
+            <!--Logo-->
+            <div class="logo">
+              <a href="index.html"><img src="images/logo1.png" alt="img"></a>
+            </div>
+
+            <!--Right Col-->
+            <div class="nav-outer">
+              <!-- Main Menu -->
+              <nav class="main-menu">
+                <div class="navbar-collapse show collapse clearfix">
+                  <ul class="navigation clearfix">
+                    <!--Keep This Empty / Menu will come through Javascript-->
+                  </ul>
+                </div>
+              </nav>
+              <!-- Main Menu End-->
+
+              <!--Mobile Navigation Toggler-->
+             <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Sticky Menu -->
+    </header>
+    <!--End Main Header -->
+      <div id="smooth-wrapper">
+      <div id="smooth-content">
+
+        <!-- Start main-content -->
+        <section class="page-title" style="background-image: url(images/resource/page-title.jpg);">
+          <div class="auto-container">
+            <div class="title-outer text-center">
+              <h1 class="title">Our Services</h1>
+              <ul class="page-breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Our Services</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- end main-content -->
+
+        <section class="feature-section fix section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+         <div class="sec-title text-center">
+          <div class="sec-sub-title">
+            <h6 class="sub-title tz-sub-tilte tz-sub-anim tx-subTitle">Donation Services</h6>
+          </div>
+          <h2 class="title tx-title sec_title tz-itm-title tz-itm-anim">
+            Supporting Recovery, Guidance <br> and Community Awareness
+          </h2>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Block 1 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+        <div class="feature-block-1">
+          <div class="icon">
+            <img src="images/icons/icon1-1.png" alt="Counseling Support">
+          </div>
+          <div class="content">
+            <h4 class="title">Addiction Counseling</h4>
+            <p>
+              We offer counseling and emotional support for individuals affected by drug addiction,
+              helping them begin their journey toward recovery and rehabilitation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+        <div class="feature-block-1">
+          <div class="icon bg-2">
+            <img src="images/icons/icon1-2.png" alt="Police Support">
+          </div>
+          <div class="content">
+            <h4 class="title">Police Coordination</h4>
+            <p>
+              We work along with police personnel to support awareness efforts, guide affected
+              individuals, and strengthen community-level action against substance abuse.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+        <div class="feature-block-1">
+          <div class="icon bg-3">
+            <img src="images/icons/icon1-3.png" alt="Education Programs">
+          </div>
+          <div class="content">
+            <h4 class="title">Education & Guidance</h4>
+            <p>
+              We conduct educational sessions for students, families, and communities to explain
+              the dangers of drug abuse and the importance of making positive life choices.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 4 -->
+      <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+        <div class="feature-block-1">
+          <div class="icon bg-4">
+            <img src="images/icons/icon1-4.png" alt="Awareness Programs">
+          </div>
+          <div class="content">
+            <h4 class="title">Awareness Campaigns</h4>
+            <p>
+              Your donations help us organize public awareness programs, outreach activities,
+              and social support initiatives focused on prevention, recovery, and community safety.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!--Start Services Details-->
+        <section class="services-details  ">
+          <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8">
+  <div class="services-details__content">
+
+    <img class="w-100" src="images/a1.jpg" alt="Vallalar Service Programs" />
+
+    <h3 class="mt-4 font-weight-700">Vallalar History Education & Service Programs</h3>
+
+    <p>
+      Vallalar Uyir Seva Arakattalai provides educational and awareness programs
+      based on the life and teachings of <strong>Ramalinga Vallalar</strong>, one of
+      the greatest spiritual reformers who preached compassion, equality, and
+      kindness toward all living beings. His philosophy of
+      <strong>“Jeeva Karunyam”</strong> teaches humanity to serve others with love
+      and care.
+    </p>
+
+    <p>
+      As part of our services, the trust conducts programs that educate people
+      about Vallalar’s life history, his humanitarian vision, and the importance
+      of living a compassionate life. These sessions help individuals understand
+      the values of unity, selflessness, and social responsibility.
+    </p>
+<div class="content mt-40 mb-70">
+  <div class="text">
+
+    <h3 class="font-weight-700">Vallalar Philosophy Courses</h3>
+
+    <p>
+      Vallalar Uyir Seva Arakattalai offers special courses that explain the
+      life, history, and humanitarian teachings of Ramalinga Vallalar.
+      These programs help individuals understand the values of compassion,
+      equality, and service to all living beings.
+    </p>
+
+    <!-- Highlight Box -->
+    <div style="background:#fff7e6;border-left:5px solid #f1ba4a;padding:20px;margin-top:20px;border-radius:6px;">
+      <h4 style="margin-bottom:10px;color:#000;">
+        🌐 Online Courses Available
+      </h4>
+      <p style="margin:0;">
+        Our Vallalar philosophy courses are now available online. Students,
+        spiritual seekers, and the public can easily join from anywhere and
+        learn about Vallalar’s teachings through structured online sessions.
+      </p>
+    </div>
+
+    <!-- <blockquote class="blockquote-one mt-30">
+      The course explains Vallalar’s principles of “Jeeva Karunyam”
+      (compassion towards all living beings) and guides participants
+      to practice kindness, spiritual awareness, and humanitarian service.
+    </blockquote> -->
+
+  </div>
+</div>
+
+  </div>
+</div>
+              <!--Start Services Details Sidebar-->
+              <div class="col-xl-4 col-lg-4">
+                <div class="service-sidebar">
+                  <!--Start Services Details Sidebar Single-->
+                  <div class="sidebar-widget service-sidebar-single">
+                  
+                   <div class="service-details-help">
+  <div class="help-shape-1"></div>
+  <div class="help-shape-2"></div>
+
+  <h2 class="help-title">
+    Support Our <br> Mission With <br> Your Donation
+  </h2>
+
+  <div class="help-icon">
+    <span class="lnr-icon-heart"></span>
+  </div>
+
+  <div class="help-contact">
+    <p>Your support helps us provide counseling, awareness programs, and rehabilitation guidance.</p>
+    <a href="tel:+919600248956">Donate or Call: +91 96002 48956</a>
+  </div>
+
+  <!-- Small Donate Form -->
+  <div style="background:#fff;padding:20px;border-radius:6px;margin-top:20px;">
+    <form method="post" action="mail.php">
+
+      <div style="margin-bottom:10px;">
+        <input type="text" placeholder="Your Name" name="name"
+        style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;">
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <input type="number" placeholder="Donation Amount (₹)" 
+        style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px;">
+      </div>
+
+     
+
+      <button type="submit"
+      style="width:100%;background:#f1ba4a;border:none;padding:12px;color:#000;font-weight:600;border-radius:4px;cursor:pointer;">
+        Donate Now
+      </button>
+
+    </form>
+  </div>
+
+</div>
+                  </div>
+                  <!--End Services Details Sidebar-->
+                </div>
+              </div>
+              <!--Start Services Details Content-->
+          
+              <!--End Services Details Content-->
+            </div>
+          </div>
+        </section>
+        <!--End Services Details-->
+        <!-- Team Section -->
+  
+
+
+
+
+
+
+
+        <!-- Main Footer -->
+          <footer class="footer-section bg-cover"
+         style="background-image: url('images/background/footer-bg.jpg');">
+          <div class="container">
+            <div class="footer-widget-wrapper">
+              <div class="row g-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                  <div class="footer-content">
+                    <a href="index.html" class="footer-logo"><img src="images/logo1.png"
+                      style="height: 110px;" alt="img"></a>
+                  <p>
+UYIR Seva Trust works with compassion and dedication to support people in need, 
+promote social welfare, and build a caring community for a better tomorrow.
+</p>
+                    <a href="contact.html" class="theme-btn">
+                      <i class="fas fa-heart"></i> Donate Now</a>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                  <div class="footer-contact-info">
+                    <div class="contact-info">
+                      <h3 class="number"><a href="tel:+919600248956"> +91 96002 48956</a></h3>
+                      <p class="email"><a href="mailto:Vallalaruyirsevaarakattalai@gmail.com">Vallalaruyirsevaarakattalai@gmail.com</a></p>
+                    </div>
+                    <h4 class="location-title">22 Noyyal Street, Kamatchipuram, Coimbatore 641013</h4>
+                  </div>
+                </div>
+                <div class="col-xl-5 col-lg-6 wow fadeInUp" data-wow-delay=".7s">
+                  <ul class="footer-menu-list">
+                    <li>
+                      <a href="index.html">
+                        <span>Home</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_871">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="services.html">
+                        <span>Our Services</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_8713">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="gallery.html">
+                        <span>Gallery</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_8714">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="contact.html">
+                        <span>Contact</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_8715">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <!-- <li>
+                      <a href="page-contact.html">
+                        <span>Contact</span>
+                        <span class="icon">
+                          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_40_871)">
+                              <path d="M5.24221 15.2714L15.072 8.38849M17.2671 6.87033C15.1405 8.17373 11.6724 11.9019 14.8132 16.3874M17.2516 6.84808C15.2994 8.40067 10.6099 10.3845 7.46918 5.89903" stroke="#FBC93E" stroke-width="1.5"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_8716">
+                                <rect width="16" height="16" fill="white" transform="translate(0 9.17722) rotate(-35)"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </span>
+                      </a>
+                    </li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="footer-bottom-wrapper wow fadeInUp" data-wow-delay=".3s">
+               <p>
+© <span id="year"></span> Vallalar Uyir Seva Arakattalai. All Rights Reserved. 
+Developed by <a href="https://chennaileads.com" target="_blank">Chennai Leads</a>
+</p>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+                <!-- <div class="social-icon">
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                  <a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!--End Main Footer -->
+      </div>
+    </div>
+
+  </div>
+  <!-- End Page Wrapper -->
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/gsap.js"></script>
+<script src="js/three.js"></script>
+<script src="js/hover-effect.umd.js"></script>
+<script src="js/gsap-scroll-to-plugin.js"></script>
+<script src="js/gsap-scroll-smoother.js"></script>
+<script src="js/gsap-scroll-trigger.js"></script>
+<script src="js/gsap-split-text.js"></script>
+<script src="js/split-type.min.js"></script>
+<script src="js/parallaxie.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/bxslider.js"></script>
+<script src="js/nice-select.min.js"></script>
+<script src="js/knob.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/mixitup.js"></script>
+<script src="js/script.js"></script>
+<script src="js/script-gsap.js"></script>
+<!-- form submit -->
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.form.min.js"></script>
+<script src="js/custom-contact.js"></script>
+  <script>
+  const toggleBtn = document.getElementById("callToggle");
+  const enquiryBox = document.getElementById("enquiryBox");
+
+  toggleBtn.addEventListener("click", () => {
+    enquiryBox.style.display =
+      enquiryBox.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".floating-contact")) {
+      enquiryBox.style.display = "none";
+    }
+  });
+  toggleBtn.addEventListener("click", () => {
+  enquiryBox.classList.toggle("show");
+});
+</script>
+</body>
+
+
+<!-- Mirrored from html.kodesolution.com/2026/hopenest-html/page-contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 08:00:25 GMT -->
+</html>
